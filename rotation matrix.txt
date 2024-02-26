@@ -1,0 +1,71 @@
+
+
+/*
+Input
+4
+1
+1
+2
+1 2
+4 3
+3
+1 2 3
+8 9 4
+7 6 5
+5
+-44 25 -52 69 -5
+17 22 51 27 -44
+-79 28 -78 1 -47
+65 -77 -14 -21 -6
+-96 43 -21 -20 90
+Output
+Test Case #1:
+1
+Test Case #2:
+4 1
+3 2
+Test Case #3:
+7 8 1
+6 9 2
+5 4 3
+Test Case #4:
+-96 65 -79 17 -44
+43 -77 28 22 25
+-21 -14 -78 51 -52
+-20 -21 1 27 69
+90 -6 -47 -44 -5
+*/
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    int t,i,j,q;
+    scanf("%d",&t);
+    for(q=0;q<t;q++){
+        int m;
+        scanf("%d",&m);
+        int a[m][m];
+        for(i=0;i<m;i++){
+            for(j=0;j<m;j++){
+                scanf("%d",&a[i][j]);
+            }
+        }
+        printf("Test Case #%d:\n",q+1);
+        for(i=0;i<m;i++){
+            for(j=m-1;j>=0;j--){
+                printf("%d ",a[j][i]);
+            }printf("\n");
+        }
+
+    }
+    return 0;
+}
