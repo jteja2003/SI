@@ -50,5 +50,5 @@ for i in range (int(input())):
     root=None
     for i in l:
         root=insert(root,i)
-    p=F_bst(root)
-    print(p)
+    pi=F_bst(root)
+    print(pi)
